@@ -1,0 +1,16 @@
+const CreatorCardErrorCodes = {
+  SLUG_INVALID: 'SL01',
+  SLUG_TAKEN: 'SL02',
+
+  ACCESS_CODE_REQUIRED: 'AC01',
+  ACCESS_CODE_NOT_ALLOWED: 'AC02',
+
+  ACCESS_CODE_INVALID: 'AC03',
+  ACCESS_CODE_MISSING: 'AC03',
+  ACCESS_CODE_MISMATCH: 'AC04',
+
+  NOT_FOUND: 'NF01',
+  IS_DRAFT: 'NF02',
+};
+
+module.exports = CreatorCardErrorCodes;

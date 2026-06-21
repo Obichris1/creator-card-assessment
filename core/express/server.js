@@ -243,11 +243,10 @@ function Server(serverConfig = {}) {
 
         responseComponents.statusCode = statusCode;
         responseComponents.body.status = 'error';
-        responseComponents.body.message = error.isApplicationError
-          ? error.message
-          : 'Some error occured.';
+        responseComponents.body.message = error.message || 'Something went wrong';
         responseComponents.body.errors = error.details || undefined;
         responseComponents.body.data = error.context;
+        responseComponents.body.code = error.errorCode;
 
         expressResponse.status(responseComponents.statusCode).json(responseComponents.body); // Todo: Add a callback config that can be used to handle this in a custom way.
       } finally {

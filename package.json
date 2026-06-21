@@ -10,6 +10,8 @@
   },
   "scripts": {
     "test": "set USE_MOCK_MODEL=1 && mocha --recursive --require dotenv/config",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "prepare": "husky",
     "commitlint": "commitlint --edit",
     "sync-envs": "node sync-env-files"
@@ -55,6 +57,7 @@
     "knex": "^3.1.0",
     "mongoose": "^8.2.0",
     "mysql2": "^3.9.1",
+    "nodemon": "^3.1.14",
     "pino": "^8.19.0",
     "request-ip": "^3.3.0",
     "resend": "^3.2.0",
